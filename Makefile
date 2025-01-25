@@ -23,7 +23,7 @@ build: ## Build or rebuild services
 	$(DOCKER_COMPOSE) build
 
 up: ## Create and start containers
-	$(DOCKER_COMPOSE) up -d
+	$(DOCKER_COMPOSE) up
 
 down: ## Stop and remove containers
 	$(DOCKER_COMPOSE) down
