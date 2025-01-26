@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { Logo } from '@/components/Logo';
 import { Project } from '@/config/site-config';
 import { useState } from 'react';
+import { ShareButton } from '@/components/ShareButton';
 
 const iconMap = {
     github: FiGithub,
@@ -32,22 +33,7 @@ export default function ProjectContent({ project }: { project: Project }) {
                         </motion.div>
                         <Logo size={32} />
                     </Link>
-                    <div className="flex gap-4">
-                        {project.links.map((link) => {
-                            const Icon = iconMap[link.type];
-                            return (
-                                <a
-                                    key={link.url}
-                                    href={link.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="p-2 rounded-full hover:bg-gray-800 text-gray-400 hover:text-white transition-colors"
-                                >
-                                    <Icon size={20} />
-                                </a>
-                            );
-                        })}
-                    </div>
+                    <ShareButton title={project.title} />
                 </div>
             </header>
 
@@ -58,7 +44,7 @@ export default function ProjectContent({ project }: { project: Project }) {
                     animate={{ opacity: 1, y: 0 }}
                     className="mb-16"
                 >
-                    <h1 className="text-4xl md:text-6xl font-bold mb-4">{project.title}</h1>
+                    <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">{project.title}</h1>
                     <p className="text-xl text-gray-400 mb-8">{project.description}</p>
 
                     {/* Main Image */}
@@ -70,6 +56,31 @@ export default function ProjectContent({ project }: { project: Project }) {
                             className="w-full h-full object-cover"
                         />
                     </div>
+
+                    {/* Project Links */}
+                    {project.links.length > 0 && (
+                        <div className="mb-16">
+                            <div className="flex flex-wrap gap-4 justify-center">
+                                {project.links.map((link) => {
+                                    const Icon = iconMap[link.type];
+                                    return (
+                                        <motion.a
+                                            key={link.url}
+                                            href={link.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-3 px-6 py-3 bg-gray-800/50 hover:bg-gray-700/50 rounded-xl text-white transition-all border border-gray-700 hover:border-gray-600"
+                                            whileHover={{ scale: 1.05 }}
+                                            whileTap={{ scale: 0.95 }}
+                                        >
+                                            <Icon size={24} />
+                                            <span className="text-sm font-medium ">{link.label}</span>
+                                        </motion.a>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    )}
 
                     {/* Tech Stack */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">

@@ -51,7 +51,7 @@ export default function Home() {
           <div className="flex justify-center mb-6">
             <Logo size={80} className="animate-float" />
           </div>
-          <h1 className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+          <h1 className="text-4xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
             {siteConfig.name}
           </h1>
           <p className="text-gray-400 mt-4 text-xl">{siteConfig.slogan}</p>

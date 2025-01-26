@@ -13,6 +13,7 @@ type ProjectPageProps = {
     params: Promise<{ id: string }>;
 };
 
+export const dynamicParams = false;
 export async function generateStaticParams() {
     return siteConfig.projects.map((project) => ({
         id: project.id,
