@@ -2,6 +2,7 @@ import { siteConfig } from '@/config/site-config';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+    metadataBase: new URL(siteConfig.url),
     title: `Privacy Policy - Swarmcrush`,
     description: `Privacy Policy for Swarmcrush mobile application`,
     openGraph: {

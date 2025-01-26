@@ -8,6 +8,7 @@ import { siteConfig } from "@/config/site-config";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: `${siteConfig.name} - ${siteConfig.slogan}`,
   description: siteConfig.description,
   keywords: ["portfolio", "developer", "tech", "projects", "skills", "web development"],

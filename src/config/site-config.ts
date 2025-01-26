@@ -66,6 +66,7 @@ export const siteConfig = {
   name: 'Omniventus',
   slogan: "Building What's Next",
   description: 'Explore the tech universe of innovative projects and solutions',
+  url: 'https://omniventus.github.io',
   author: {
     name: 'Lionel Zoclanclounon',
     role: 'Lead / Full Stack Developer / Freelancer',
