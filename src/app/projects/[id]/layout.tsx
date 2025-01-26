@@ -19,7 +19,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     return {
-        metadataBase: new URL(siteConfig.url),
         title: `${project.title} - ${siteConfig.name}`,
         description: project.description,
         openGraph: {
