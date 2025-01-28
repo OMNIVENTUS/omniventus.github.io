@@ -154,3 +154,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 
 inspired by https://dev.to/daviidy/6-steps-to-deploy-your-react-nextjs-app-with-github-pages-33ck
+
