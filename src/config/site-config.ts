@@ -5,7 +5,7 @@ export const siteConfig: SiteConfig = {
   name: 'Omniventus',
   slogan: "Building What's Next",
   description: 'Explore the tech universe of innovative projects and solutions',
-  url: 'https://omniventus.github.io',
+  url: 'https://omniventus.com',
   author: {
     name: 'Lionel Zoclanclounon',
     role: 'Lead / Full Stack Developer / Freelancer',
