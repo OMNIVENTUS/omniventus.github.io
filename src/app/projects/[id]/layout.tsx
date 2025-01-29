@@ -1,6 +1,6 @@
 import { siteConfig } from '@/config/site-config';
 import { Metadata } from 'next';
-import type { Project } from '@/config/site-config';
+import type { Project } from '@/config/types';
 
 type Props = {
     params: Promise<{ id: string }>
