@@ -24,7 +24,21 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [siteConfig.author.avatar],
+    type: "website",
+    images: [
+      {
+        url: siteConfig.author.avatar,
+        type: "image/png",
+        width: 1200,
+        height: 630,
+      },
+      // {
+      //   url: siteConfig.author.avatar,
+      //   type: "image/png",
+      //   width: 1200,
+      //   height: 630,
+      // },
+    ],
   },
   twitter: {
     card: 'summary_large_image',

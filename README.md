@@ -155,3 +155,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 inspired by https://dev.to/daviidy/6-steps-to-deploy-your-react-nextjs-app-with-github-pages-33ck
 
+
+todo : keep og:image dimensions to 1200x630 and under 300kb
