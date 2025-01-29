@@ -202,12 +202,12 @@ export const siteConfig = {
         {
           url: '/projects/swarmcrush/screen1.png',
           alt: 'Screenshot 1',
-          caption: 'IOS app store screenshot 1'
+          caption: 'IOS app store screenshots'
         },
         {
           url: '/projects/swarmcrush/screen2.png',
           alt: 'Screenshot 2',
-          caption: 'IOS app store screenshot 2'
+          caption: 'action game'
         },
         {
           url: '/projects/swarmcrush/screen3.png',
@@ -217,12 +217,12 @@ export const siteConfig = {
         {
           url: '/projects/swarmcrush/screen4.png',
           alt: 'Screenshot 4',
-          caption: 'IOS app store screenshot 4'
+          caption: 'Built with Expo'
         },
         {
           url: '/projects/swarmcrush/screen5.png',
           alt: 'Screenshot 5',
-          caption: 'IOS app store screenshot 5'
+          caption: 'Built with AI'
         },
       ],
       links: [

@@ -4,6 +4,7 @@ import "./globals.css";
 import { ContactWidget } from "@/components/ContactWidget";
 import { Footer } from "@/components/Footer";
 import { siteConfig } from "@/config/site-config";
+import { Analytics } from '@/components/Analytics';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,6 +56,7 @@ export default function RootLayout({
         </div>
         <Footer />
         <ContactWidget />
+        <Analytics />
       </body>
     </html>
   );
