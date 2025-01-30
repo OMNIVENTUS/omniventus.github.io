@@ -23,7 +23,7 @@ build: ## Build or rebuild services
 	$(DOCKER_COMPOSE) build
 
 up: ## Create and start containers
-	$(DOCKER_COMPOSE) up -d
+	$(DOCKER_COMPOSE) up
 
 down: ## Stop and remove containers
 	$(DOCKER_COMPOSE) down
@@ -52,6 +52,7 @@ export-static: ## Export static files to out directory
 	rm -rf out
 	npm run build
 	touch out/.nojekyll
+	echo "omniventus.com" > out/CNAME
 
 ## GitHub Pages deployment
 deploy-gh: export-static ## Deploy to GitHub Pages
