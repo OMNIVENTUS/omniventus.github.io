@@ -6,7 +6,7 @@ import { FaGooglePlay, FaAppStore } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Logo } from '@/components/Logo';
-import { Project } from '@/config/site-config';
+import { Project } from '@/config/types';
 import { useState } from 'react';
 import { ShareButton } from '@/components/ShareButton';
 
