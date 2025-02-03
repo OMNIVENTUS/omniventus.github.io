@@ -4,10 +4,10 @@ export const projects: Project[] = [
     {
         id: 'swarmcrush',
         type: 'mobileApp',
-        title: 'SwarmCrush',
+        title: 'SwarmCrush app',
         description: 'Fast-paced arcade game where you crush swarms and climb global rankings.',
         longDescription: 'SwarmCrush is an innovative mobile application that helps people discover and connect with others who share their interests, hobbies, and passions...',
-        skills: ['React Native', 'TypeScript', 'Firebase', 'Expo', 'UI/UX design', 'Sentry'],
+        skills: ['React Native', 'TypeScript', 'Firebase', 'Expo', 'UI/UX design', 'Sentry', 'ios', 'android'],
         mainImage: {
             url: '/projects/swarmcrush/main.png',
             alt: 'SwarmCrush App Screenshot'
@@ -96,7 +96,7 @@ export const projects: Project[] = [
     {
         id: 'recipe-ingredient-range',
   type: 'wordpress-plugin',
-  title: 'DynamicDish',
+  title: 'DynamicDish plugin',
   description: 'A recipe ingredient calculator WordPress plugin that adjusts quantities based on servings, supporting both Gutenberg and Elementor.',
   longDescription: 'A WordPress plugin created to help food blogs dynamically calculate recipe ingredient quantities based on serving size. Originally developed for lecarnetdebineta.com, this plugin offers multiple calculation methods, responsive design, and full compatibility with both Gutenberg block editor and Elementor.',
   skills: [
@@ -109,6 +109,7 @@ export const projects: Project[] = [
     'Gutenberg Blocks',
     'Elementor Widgets',
     'Docker',
+    'Cursor AI'
   ],
   mainImage: {
     url: '/projects/recipe-ingredient-range/main.png',
@@ -216,6 +217,93 @@ export const projects: Project[] = [
 
     ]
   }
-    }
+  },
+  {
+    "id": "reseau-evolve-capital",
+    "type": "website",
+    "title": "Réseau Evolve Capital Website",
+    "description": "A fast, SEO-optimized website for Réseau Evolve Capital, designed for traffic acquisition, member growth, and sponsorship outreach.",
+    "longDescription": "This website was built to enhance the online presence of Réseau Evolve Capital, a business and investment networking association. It aims to attract new members, increase traffic, and facilitate sponsorship acquisition. The site is fully static, leveraging Next.js with Static Site Generation (SSG) for optimal performance and cost efficiency by hosting on GitHub Pages. It includes privacy-first analytics using Cloudflare Analytics, dynamic animations with Framer Motion, and AI-assisted content generation for a streamlined workflow.",
+    "skills": ["Next.js", "React", "Tailwind CSS", "Framer Motion", "SEO", "Docker", "GitHub Pages", "Cloudflare Analytics"],
+    "mainImage": {
+      "url": "/projects/reseau-evolve-capital/main.png",
+      "alt": "Homepage of Réseau Evolve Capital website"
+    },
+    "images": [
+      {
+        "url": "/projects/reseau-evolve-capital/screenshot1.jpg",
+        "alt": "fun 404 page"
+      },
+      {
+        "url": "/projects/reseau-evolve-capital/screenshot2.jpg",
+        "alt": "Events section of the website"
+      }
+    ],
+    "links": [
+      {
+        "url": "https://reseauevolvecapital.com/fr/",
+        "type": "website",
+        "label": "Live Website"
+      },
+      // {
+      //   "url": "https://github.com/your-repo",
+      //   "type": "github",
+      //   "label": "GitHub Repository"
+      // }
+    ],
+    "features": [
+      {
+        "title": "SEO-Optimized Static Website",
+        "description": "Built with Next.js and SSG to ensure fast loading speeds and high SEO performance."
+      },
+      {
+        "title": "Privacy-First Analytics",
+        "description": "Integrated Cloudflare Analytics to track user engagement without compromising privacy."
+      },
+      {
+        "title": "Framer Motion Animations",
+        "description": "Smooth animations for an engaging user experience."
+      },
+      {
+        "title": "AI-Assisted Development",
+        "description": "Used Cursor AI editor for faster development and better code quality."
+      }
+    ],
+    "challenges": [
+      "Building and deploying an SEO-optimized static website on a limited budget.",
+      "Ensuring the site remains lightweight and fast while integrating dynamic elements like animations.",
+      "Using AI-assisted tools efficiently to speed up development without sacrificing quality."
+    ],
+    "solutions": [
+      "Leveraged Next.js Static Site Generation (SSG) to generate a fast and cost-effective website.",
+      "Hosted the site on GitHub Pages to minimize hosting costs.",
+      "Used Framer Motion for lightweight yet engaging animations.",
+      "Utilized Cursor AI editor for efficient development, reducing build time to 15 hours."
+    ],
+    "techStack": {
+      "frontend": ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+      "devops": ["Docker", "GitHub Pages"],
+      "other": ["Cloudflare Analytics", "Cursor AI Editor"]
+    },
+    "timeline": {
+      "started": "2025-01-31",
+      "completed": "2025-02-03",
+      "status": "completed"
+    },
+    "team": {
+      "size": 1,
+      "roles": ["Full-Stack Developer", "SEO Specialist", "Content Strategist"]
+    },
+    metrics: {
+      //users: 500, 
+      custom: [
+          { "label": "Traffic", "value": "1000+" },
+          { "label": "Ai Assistance", "value": "99% AI (Cursor)" },
+          {"label": "hostingCost", "value": "0€"}
+      ]
+  }
+
+  }
+  
     
 ]; 
