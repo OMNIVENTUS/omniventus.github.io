@@ -27,11 +27,12 @@ export type ProjectFeature = {
 
 export type Project = {
     id: string;
-    type: 'mobileApp' | 'website' | 'backend' | 'wordpress-plugin';
+    type: 'mobileApp' | 'website' | 'backend' | 'wordpress-plugin' | 'webapp';
     title: string;
     description: string;
     longDescription: string;
     skills: string[];
+    seoKeywords: string[];
     mainImage: ProjectImage;
     images: ProjectImage[];
     links: ProjectLink[];
