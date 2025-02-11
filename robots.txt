@@ -1,0 +1,9 @@
+User-Agent: *
+Allow: /
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+Host: https://omniventus.com
+Sitemap: https://omniventus.com/sitemap.xml
