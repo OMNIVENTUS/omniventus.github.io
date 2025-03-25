@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiArrowLeft, FiExternalLink, FiGithub, FiX } from 'react-icons/fi';
+import { FiArrowLeft, FiExternalLink, FiGithub, FiX, FiCalendar, FiClock } from 'react-icons/fi';
 import { FaGooglePlay, FaAppStore } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -9,6 +9,7 @@ import { Logo } from '@/components/Logo';
 import { Project } from '@/config/types';
 import { useState } from 'react';
 import { ShareButton } from '@/components/ShareButton';
+import moment from 'moment';
 
 const iconMap = {
     github: FiGithub,
@@ -22,8 +23,67 @@ const iconMap = {
 export default function ProjectContent({ project }: { project: Project }) {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
+    // Format dates using Moment.js
+    const startDate = moment(project.timeline.started);
+    const endDate = project.timeline.completed ? moment(project.timeline.completed) : moment();
+    const formattedStartDate = startDate.format('MMMM YYYY');
+    const formattedEndDate = project.timeline.completed ? moment(project.timeline.completed).format('MMMM YYYY') : 'Present';
+    const duration = moment.duration(endDate.diff(startDate));
+
+    // Format duration in a human-readable way
+    const getDurationText = () => {
+        const years = duration.years();
+        const months = duration.months();
+        const days = duration.days();
+        if (years >= 1) {
+            return `${years} year${years > 1 ? 's' : ''}${months > 0 ? ` ${months} month${months > 1 ? 's' : ''}` : ''}`;
+        } else if (months >= 1) {
+            return `${months} month${months > 1 ? 's' : ''}`;
+        } else if (days >= 1) {
+            return `${days} day${days > 1 ? 's' : ''}`;
+        } else {
+            return 'Less than a day';
+        }
+    };
+
+    // Helper function to get project status badge color
+    const getStatusColor = (status: string) => {
+        switch (status) {
+            case 'completed':
+                return 'bg-green-500/10 text-green-400';
+            case 'in-progress':
+                return 'bg-blue-500/10 text-blue-400';
+            case 'planned':
+                return 'bg-yellow-500/10 text-yellow-400';
+            default:
+                return 'bg-gray-500/10 text-gray-400';
+        }
+    };
+
+    // Prepare structured data for SEO
+    const structuredData = {
+        '@context': 'https://schema.org',
+        '@type': 'Project',
+        name: project.title,
+        description: project.description,
+        image: project.mainImage.url,
+        datePublished: startDate.toISOString(),
+        dateModified: endDate.toISOString(),
+        author: {
+            '@type': 'Organization',
+            name: 'Omniventus'
+        },
+        keywords: project.seoKeywords.join(','),
+    };
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
+            {/* Add structured data */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+
             {/* Header */}
             <header className="sticky top-0 z-50 backdrop-blur-lg border-b border-gray-800">
                 <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -45,7 +105,23 @@ export default function ProjectContent({ project }: { project: Project }) {
                     className="mb-16"
                 >
                     <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">{project.title}</h1>
-                    <p className="text-xl text-gray-400 mb-8">{project.description}</p>
+
+                    {/* Timeline Information */}
+                    <div className="flex flex-wrap gap-4 items-center mb-4 text-sm">
+                        <div className="flex items-center gap-2">
+                            <FiCalendar className="text-gray-400" />
+                            <span>Started {formattedStartDate}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <FiClock className="text-gray-400" />
+                            <span>Duration: {getDurationText()}</span>
+                        </div>
+                        <span className={`px-3 py-1 rounded-full text-sm ${getStatusColor(project.timeline.status)}`}>
+                            {project.timeline.status.charAt(0).toUpperCase() + project.timeline.status.slice(1)}
+                        </span>
+                    </div>
+
+                    <p className="text-xl text-gray-400 mb-8">{project.longDescription}</p>
 
                     {/* Main Image */}
                     <div className="relative aspect-video rounded-xl overflow-hidden mb-8">
@@ -81,6 +157,35 @@ export default function ProjectContent({ project }: { project: Project }) {
                             </div>
                         </div>
                     )}
+
+                    {/* Project Timeline Section */}
+                    <section className="mb-16">
+                        <h2 className="text-3xl font-bold mb-8">Project Timeline</h2>
+                        <div className="bg-gray-800/50 rounded-lg p-6">
+                            <div className="space-y-4">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-24 text-gray-400">Started:</div>
+                                    <div>{formattedStartDate}</div>
+                                </div>
+                                {project.timeline.completed && (
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-24 text-gray-400">Completed:</div>
+                                        <div>{formattedEndDate}</div>
+                                    </div>
+                                )}
+                                <div className="flex items-center gap-4">
+                                    <div className="w-24 text-gray-400">Duration:</div>
+                                    <div>{getDurationText()}</div>
+                                </div>
+                                <div className="flex items-center gap-4">
+                                    <div className="w-24 text-gray-400">Status:</div>
+                                    <span className={`px-3 py-1 rounded-full text-sm ${getStatusColor(project.timeline.status)}`}>
+                                        {project.timeline.status.charAt(0).toUpperCase() + project.timeline.status.slice(1)}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
                     {/* Tech Stack */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
