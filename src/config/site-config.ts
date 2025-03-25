@@ -4,7 +4,7 @@ import { projects } from './projects';
 export const siteConfig: SiteConfig = {
   name: 'Omniventus',
   slogan: "Building What's Next",
-  description: 'Explore the tech universe of innovative projects and solutions',
+  description: 'Transform your ideas into reality with Lionel ZOCLANCLOUNON. Expert in mobile apps, web platforms & WordPress solutions. Portfolio includes fintech, e-learning & retail projects.',
   url: 'https://omniventus.com',
   author: {
     name: 'Lionel Zoclanclounon',

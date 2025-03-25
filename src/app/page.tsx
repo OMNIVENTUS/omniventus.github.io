@@ -148,7 +148,7 @@ export default function Home() {
               onChange={(e) => setSearchQuery(e.target.value)}
               onFocus={() => setIsSearchFocused(true)}
               onBlur={() => setTimeout(() => setIsSearchFocused(false), 200)}
-              placeholder="Search technologies, projects..."
+              placeholder="Search skills, or technologies..."
               className="w-full py-3 px-12 bg-gray-800/50 rounded-full focus:outline-none"
             />
             {searchQuery && (

@@ -20,7 +20,23 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: `${siteConfig.name} - ${siteConfig.slogan}`,
   description: siteConfig.description,
-  keywords: ["portfolio", "developer", "tech", "projects", "skills", "web development"],
+  keywords: ["fullstack developer", "senior react developer", "mobile developer", "wordpress developer", "developpeur react", "développer symfony", "freelance react", "freelance wordpress"],
+
+  // Enhanced SEO settings
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
