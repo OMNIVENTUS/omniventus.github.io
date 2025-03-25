@@ -114,6 +114,20 @@ The deployment process will:
 2. Create a `.nojekyll` file to bypass Jekyll processing
 3. Push the contents to the `gh-pages` branch
 
+### Continuous Integration / Continuous Deployment
+
+The repository is configured with GitHub Actions for automatic deployment:
+
+- When changes are pushed to the `main` branch, the site is automatically built and deployed to GitHub Pages
+- The workflow executes the following steps:
+  1. Checkout the code
+  2. Set up Node.js environment
+  3. Install dependencies
+  4. Build the static site
+  5. Deploy to the `gh-pages` branch
+
+To view the deployment status and logs, check the "Actions" tab in the GitHub repository.
+
 ### Manual Deployment
 
 You can also manually deploy the static files from the `out` directory to any static file hosting service. Note that the `.nojekyll` file is only required for GitHub Pages deployment.
@@ -124,6 +138,7 @@ You can also manually deploy the static files from the `out` directory to any st
 - `tailwind.config.ts`: Tailwind CSS configuration
 - `docker-compose.yml`: Docker services configuration
 - `Dockerfile`: Docker build configuration
+- `.github/workflows/deploy.yml`: GitHub Actions workflow configuration
 
 ## 📝 Project Structure
 
@@ -137,6 +152,8 @@ You can also manually deploy the static files from the `out` directory to any st
 ├── docker-compose.yml   # Docker Compose configuration
 ├── Dockerfile          # Docker configuration
 ├── next.config.ts      # Next.js configuration
+├── .github/            # GitHub configurations
+│   └── workflows/      # GitHub Actions workflows
 └── package.json        # Project dependencies and scripts
 ```
 
@@ -151,3 +168,17 @@ You can also manually deploy the static files from the `out` directory to any st
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+inspired by https://dev.to/daviidy/6-steps-to-deploy-your-react-nextjs-app-with-github-pages-33ck
+
+
+todo : keep og:image dimensions to 1200x630 and under 300kb
+
+### SEO description
+
+Lionel ZOCLANCLOUNON | Senior Full-Stack Developer at Omniventus. 7+ years building enterprise solutions with React, React Native & Node.js. Past clients: KFC, G20, L'École Française.
+
+Transform your ideas into reality with Lionel ZOCLANCLOUNON. Expert in mobile apps, web platforms & WordPress solutions. Portfolio includes fintech, e-learning & retail projects.
+
+Full-stack craftsman Lionel ZOCLANCLOUNON shares insights from Omniventus projects. Specialized in React Native, Next.js, TypeScript & modern cloud architectures.
