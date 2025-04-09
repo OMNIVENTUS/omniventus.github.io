@@ -25,6 +25,9 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     
+    env:
+      NEXT_PUBLIC_CLOUDFLARE_ANALYTICS_TOKEN: "${{ secrets.NEXT_PUBLIC_CLOUDFLARE_ANALYTICS_TOKEN }}"
+
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE
       - name: Checkout repository
