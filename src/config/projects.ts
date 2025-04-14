@@ -243,6 +243,194 @@ export const projects: Project[] = [
     }
   },
   {
+    "id": "foncier-online",
+    "type": "webapp",
+    "title": "FoncierOnline",
+    "description": "A powerful real estate valuation platform designed to connect property owners with professionals through accurate estimations, secure document management, and expert consultations.",
+    "longDescription": "FoncierOnline is a robust and fully-featured real estate valuation platform that optimizes the entire property estimation process. The application enables property owners to submit detailed valuation requests via an intuitive multi-step form, upload relevant documents, and receive tailored assessments from experts. It features dedicated dashboards for both clients and administrators, with secure real-time communication and private consultation workflows. \n\nThe project was developed under the technical leadership of a senior fullstack developer from LAZONE — a company specializing in sourcing reliable French-speaking tech talents. As Lead Developer, I was responsible for structuring the technical roadmap, defining the architecture and tech stack with the development team, managing the planning and feature scope with the client, and ensuring timely delivery. I led a multidisciplinary remote team composed of frontend, backend, DevOps, and UI/UX contributors, handling code reviews, architecture decisions, and overall project coordination from inception to production.\n\nBuilt using a modern monorepo architecture powered by Turborepo, the platform integrates a performant stack including Next.js, Chakra UI, TypeScript, GraphQL, and Strapi CMS, ensuring scalability, modularity, and maintainability.",
+    "skills": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "GraphQL",
+      "Strapi CMS",
+      "Lead developer",
+      "Monorepo",
+      "Remote Team Management",
+      "Client Communication"
+    ],
+    "seoKeywords": [
+      "Formik",
+      "Project Structuring",
+      "React",
+      "Storybook",
+      "Chakra UI",
+      "real estate valuation",
+      "property estimation",
+      "real estate platform",
+      "property consultation",
+      "Next.js real estate application",
+      "GraphQL CMS integration",
+      "Strapi headless CMS",
+      "Chakra UI dashboard",
+      "TypeScript web application",
+      "monorepo architecture",
+      "lead developer",
+      "remote team leader",
+      "offshore development",
+      "remote development",
+      "LAZONE developer",
+      "project lead",
+      "tech team management",
+      "Technical Roadmap Planning",
+    ],
+    "mainImage": {
+      "url": "/projects/foncieronline/main.jpg",
+      "alt": "FoncierOnline platform dashboard showing property estimation interface"
+    },
+    "images": [
+      {
+        "url": "/projects/foncieronline/form_step_1.jpg",
+        "alt": "Client form step 1",
+        "caption": "Client form step 1"
+      },
+      {
+        "url": "/projects/foncieronline/form_step_2.jpg",
+        "alt": "Client form step 2",
+        "caption": "Client form step 2"
+      },
+      {
+        "url": "/projects/foncieronline/dashboard_client_1.jpg",
+        "alt": "Client dashboard 1",
+        "caption": "Client dashboard 1"
+      },
+      {
+        "url": "/projects/foncieronline/dashboard_client_2.jpg",
+        "alt": "Client dashboard 2",
+        "caption": "Client dashboard 2"
+      },
+      {
+        "url": "/projects/foncieronline/dashboard_admin.jpg",
+        "alt": "Admin dashboard",
+        "caption": "Admin dashboard"
+      }
+    ],
+    "links": [
+      {
+        "url": "https://foncieronline.fr",
+        "type": "website",
+        "label": "Live Website"
+      }
+    ],
+    "features": [
+      {
+        "title": "Multi-step Estimation Request Form",
+        "description": "User-friendly form with address autocomplete, property type selection, and document upload features, streamlining the collection of comprehensive property data.",
+        "icon": "form"
+      },
+      {
+        "title": "Client Dashboard",
+        "description": "Tailored dashboard for property owners to view valuations, track estimation statuses, and manage profile settings.",
+        "icon": "dashboard"
+      },
+      {
+        "title": "Admin Management System",
+        "description": "Advanced admin interface to manage incoming requests, qualify leads, and facilitate professional consultations.",
+        "icon": "admin"
+      },
+      {
+        "title": "Document Management",
+        "description": "Secure and scalable system for uploading, viewing, and managing property-related documents, supporting multiple file formats.",
+        "icon": "document"
+      },
+      {
+        "title": "Private Consultation System",
+        "description": "Integrated workflow for arranging private consultations between owners and real estate professionals or potential investors.",
+        "icon": "meeting"
+      },
+      {
+        "title": "User Authentication & Profile Management",
+        "description": "Secure login system with password reset functionality and comprehensive profile controls.",
+        "icon": "user"
+      }
+    ],
+    "challenges": [
+      "Designing a scalable architecture to accommodate multiple user roles and complex workflows",
+      "Ensuring document security and access control in a multi-tenant environment",
+      "Creating a smooth and dynamic multi-step form for detailed property data",
+      "Delivering a fully responsive experience across mobile, tablet, and desktop",
+      "Integrating external APIs for location and address validation",
+      "Keeping frontend and CMS data in sync with low latency and high reliability"
+    ],
+    "solutions": [
+      "Adopted a monorepo setup with Turborepo for scalable and modular code organization",
+      "Leveraged Strapi CMS with custom GraphQL endpoints for flexible, headless content management",
+      "Developed reusable and theme-compliant UI components using Storybook",
+      "Implemented responsive layouts using Chakra UI and mobile-first design principles",
+      "Built a robust form engine with Formik and Yup for validation and error feedback",
+      "Secured authentication using JWT tokens and encrypted storage practices"
+    ],
+    "techStack": {
+      "frontend": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Chakra UI",
+        "Formik",
+        "Yup",
+        "React-Intl"
+      ],
+      "backend": [
+        "Strapi CMS",
+        "GraphQL",
+        "PostgreSQL",
+        "Node.js"
+      ],
+      "devops": [
+        "Docker",
+        "Docker Compose",
+        "Turborepo"
+      ],
+      "other": [
+        "Storybook",
+        "URQL GraphQL Client",
+        "Digital Ocean Spaces (S3)"
+      ]
+    },
+    "timeline": {
+      "started": "2024-05-01",
+      "completed": "2024-09-01",
+      "status": "completed"
+    },
+    "team": {
+      "size": 5,
+      "roles": [
+        "Frontend Developer",
+        "Backend Developer",
+        "UI/UX Designer",
+        "Project Manager",
+        "DevOps Engineer"
+      ]
+    },
+    "metrics": {
+      users: 1000,
+      "custom": [
+        {
+          "label": "Average Estimation Time",
+          "value": "48 hours"
+        },
+        {
+          "label": "User Satisfaction Rate",
+          "value": "92%"
+        },
+        {
+          "label": "Supported Property Types",
+          "value": "10+"
+        }
+      ]
+    }
+  },  
+  {
     id: 'swarmcrush',
     type: 'mobileApp',
     title: 'SwarmCrush app',
