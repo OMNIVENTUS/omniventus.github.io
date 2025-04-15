@@ -320,6 +320,11 @@ export const projects: Project[] = [
         "url": "https://foncieronline.fr",
         "type": "website",
         "label": "Live Website"
+      },
+      {
+        "url": "https://la-zone.io",
+        "type": "website",
+        "label": "Discover LAZONE"
       }
     ],
     "features": [
