@@ -2,6 +2,168 @@ import { Project } from './types';
 
 export const projects: Project[] = [
   {
+    id: 'travel-matrix-wordpress-plugin',
+    type: 'wordpress-plugin',
+    title: 'Travelling Website WordPress Plugin',
+    description: 'A robust WordPress plugin for managing, filtering, and displaying travel destinations, themes, regions, and countries, powering the safarisokavango.com website.',
+    longDescription: `
+  Travel Matrix is a modern, full-featured WordPress plugin designed to help travel agencies and experience providers manage and showcase destinations with advanced filtering, CRM, and Elementor integration. Built with a modular, scalable architecture using React, Symfony, and modern PHP, it enables seamless content management and dynamic user experiences. The plugin is the result of years of expertise in React, Symfony, PHP, and WordPress, and is actively used to power and enhance safarisokavango.com.
+    `,
+    skills: [
+      'WordPress-plugin',
+      'PHP',
+      'React',
+      'Symfony',
+      'Elementor',
+      'Docker',
+      'Webpack',
+      'Composer',
+      'MySQL',
+      'REST API'
+    ],
+    seoKeywords: [
+      'WordPress plugin',
+      'travel website',
+      'Elementor',
+      'React',
+      'Symfony',
+      'CRM',
+      'travel destinations',
+      'filter grid',
+      'custom post types',
+      'safarisokavango',
+      'travel matrix',
+      'Mailhog',
+      'phpMyAdmin',
+      'DevOps',
+      'ACF',
+      'CRM',
+      'AJAX',
+       'Tailwind',
+    ],
+    mainImage: {
+      url: '/projects/safari-okavango/main.jpeg',
+      alt: 'Wordpress plugin for travelling site',
+      caption: 'SafarisOkavango.com powered by Travel Matrix plugin',
+    },
+    images: [
+      {
+        url: '/projects/safari-okavango/screenshot1.jpg',
+        alt: 'Custom Dashboard built in React and Symfony',
+        caption: 'Custom Dashboard built in React and Symfony',
+      },
+      {
+        url: '/projects/safari-okavango/screenshot2.jpeg',
+        alt: 'Custom post type to handle destinations',
+        caption: 'Custom post type to handle destinations',
+      },
+      {
+        url: '/projects/safari-okavango/screenshot3.jpeg',
+        alt: 'Custom elementor widget built in react for filtering destinations',
+        caption: 'Custom elementor widget built in react for filtering destinations',
+      },
+    ],
+    links: [
+      {
+        url: 'https://safarisokavango.com',
+        type: 'website',
+        label: 'Live Website',
+      },
+    ],
+    features: [
+      {
+        title: 'Advanced Filtering',
+        description: 'Rest API and React-powered filtering by theme, region, and country for destinations.',
+        icon: 'filter',
+      },
+      {
+        title: 'Custom CRM',
+        description: 'Integrated CRM for managing customer inquiries and contact form submissions.',
+        icon: 'crm',
+      },
+      {
+        title: 'Elementor Widgets',
+        description: 'Custom widgets built with React for Loop Grid, Filter Grid, and Taxonomy Terms, fully integrated with Elementor.',
+        icon: 'elementor',
+      },
+      {
+        title: 'Taxonomy Image Support',
+        description: 'Upload and display images for taxonomy terms, enhancing the visual experience.',
+        icon: 'image',
+      },
+      {
+        title: 'Modern DevOps',
+        description: 'Docker-based local development, Makefile automation, and .env configuration.',
+        icon: 'devops',
+      },
+      {
+        title: 'Symfony & Composer',
+        description: 'Symfony components and Composer for robust, maintainable PHP architecture.',
+        icon: 'symfony',
+      },
+      {
+        title: 'Internationalization',
+        description: 'All user-facing strings are translation-ready for global reach.',
+        icon: 'i18n',
+      },
+    ],
+    challenges: [
+      'Designing a flexible data model for destinations, themes, regions, and countries.',
+      'Integrating React and modern JS tooling into a WordPress/Elementor environment.',
+      'Building a custom CRM within WordPress with robust data handling.',
+      'Ensuring high performance and maintainability across backend and frontend.',
+      'Automating development and deployment workflows for rapid iteration.',
+    ],
+    solutions: [
+      'Used custom post types and taxonomies for a scalable data model.',
+      'Leveraged React, Tailwind CSS, and Webpack for a modern frontend.',
+      'Implemented a custom CRM with database storage and admin dashboard.',
+      'Adopted Symfony components and Composer for backend robustness.',
+      'Set up Docker, Makefile, and .env for streamlined DevOps.',
+    ],
+    techStack: {
+      frontend: [
+        'React',
+        'Tailwind CSS',
+        'Webpack',
+        'Goober',
+        'Elementor',
+        'ACF',
+      ],
+      backend: [
+        'WordPress',
+        'PHP 8+',
+        'Symfony Components',
+        'Composer',
+        'Doctrine ORM',
+        'MySQL',
+        'REST API',
+        'AJAX',
+      ],
+      devops: [
+        'Docker Compose',
+        'Makefile',
+        'Mailhog',
+      ]
+    },
+    timeline: {
+      started: '2025-04-01',
+      completed: '2025-05-31',
+      status: 'completed',
+    },
+    team: {
+      size: 3,
+      roles: ['Full Stack Developer', 'Wordpress Developer'],
+    },
+    metrics: {
+      custom: [
+        { label: 'CustomElementor Widgets', value: '4+' },
+        { label: 'CRM Submissions', value: '1000+' },
+        { label: 'Traffic by month', value: '28000+' },
+      ],
+    },
+  },
+  {
     "id": "librechat-custom",
     "type": "webapp",
     "title": "LibreChat Enterprise Customization",
@@ -711,7 +873,7 @@ export const projects: Project[] = [
 
       ],
       backend: [
-        'PHP 7.4+',
+        'PHP 8+',
         'WordPress Plugin API'
       ],
       devops: [
@@ -734,7 +896,7 @@ export const projects: Project[] = [
       users: 10000,
       custom: [
         { label: 'WordPress Version', value: '6.0+' },
-        { label: 'PHP Version', value: '7.4+' },
+        { label: 'PHP Version', value: '8+' },
         { label: 'Languages', value: 'English, French' },
         { label: 'recipes', value: '500+' },
 
